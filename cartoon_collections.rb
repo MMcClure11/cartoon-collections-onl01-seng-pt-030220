@@ -13,10 +13,8 @@ def long_planeteer_calls(words)# code an argument here
 end
 
 def find_the_cheese(array)# code an argument here
-  i = 0 
   cheese_types = ["cheddar", "gouda", "camembert"]
-   while i < cheese_types.length
-    return cheese_types[i] if array.include?(cheese_types[i])
-    i += 1
+   array.find do |maybe_cheese| 
+     cheese_types.include?(maybe_cheese)
   end 
 end
